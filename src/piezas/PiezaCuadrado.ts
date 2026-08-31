@@ -8,7 +8,7 @@ export class PiezaCuadrado extends PiezaBase {
       { x: 0, y: 1 },
       { x: 1, y: 1 },
     ];
-    const pivote: Posicion = { x: 0.5, y: 0.5 };
+    const pivote: Posicion = { x: 0.2, y: 0.2 };
     super("Cuadrado", bloquesIniciales, pivote);
   }
 
