@@ -134,7 +134,6 @@ export class Tablero {
       const filasNuevas = Array.from({ length: eliminadas }, () =>
         Array(Tablero.ANCHO).fill(false)
       );
-      // El tablero conserva la misma cantidad total de casillas (Req. 5)
       this.celdas = [...filasNuevas, ...filasRestantes];
     }
   }
@@ -153,13 +152,13 @@ export class Tablero {
     if (sentido === "derecha") {
       this.piezaActual.rotarDerecha();
       if (this.cabe(this.piezaActual, this.posicionActual)) return true;
-      this.piezaActual.rotarIzquierda(); // revertir (rotación inversa exacta)
+      this.piezaActual.rotarIzquierda();
       return false;
     }
 
     this.piezaActual.rotarIzquierda();
     if (this.cabe(this.piezaActual, this.posicionActual)) return true;
-    this.piezaActual.rotarDerecha(); // revertir
+    this.piezaActual.rotarDerecha();
     return false;
   }
 }
